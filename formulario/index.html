@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="container">
+
+
+         <!-- formulario para logar -->
+        <form class="container-form" id="form-logar">
+
+            <h2>Logar</h2>
+            
+            <div class="container-text">
+                <label for="email">email</label>
+                <input type="text" name="email" id="email" autocomplete="off">
+
+            </div>
+            
+            <div class="container-text">
+                <label for="senha">senha</label>
+                <input type="password" name="senha" id="senha" autocomplete="off">
+            </div>
+
+            <button class="button-active" type="submit">Entrar</button>
+
+            <a href="#">Esqueceu a Senha?</a>
+
+             <!-- função que volta para o registrar -->
+            <button onclick="OpenOrCloseForms()">Registrar</button>
+            
+        </form>
+
+
+
+        <!-- formulario para Registrar -->
+
+        <form class="container-form deactive" id="form-registrar">
+
+            <h2>Registrar</h2>
+            
+            <div class="container-text">
+                <label for="email">email</label>
+                <input type="text" name="email" id="email" autocomplete="off">
+
+            </div>
+            
+            <div class="container-text">
+                <label for="senha">senha</label>
+                <input type="password" name="senha" id="senha" autocomplete="off">
+            </div>
+
+            <div class="container-text">
+                <label for="senha">Confirme a senha</label>
+                <input type="password" name="senha" id="senha" autocomplete="off">
+            </div>
+
+            <button class="button-active" type="submit">Registrar</button>
+
+            
+            <!-- função que volta para o logar -->
+            <button onclick="OpenOrCloseForms()">Logar</button>
+            
+        </form>
+    
+    </section>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
