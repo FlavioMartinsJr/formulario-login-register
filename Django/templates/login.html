@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css ' %}">
     <title>Document</title>
 </head>
 <body>
@@ -11,19 +12,19 @@
 
 
          <!-- formulario para logar -->
-        <form class="container-form" id="form-logar">
+        <form class="container-form" method="post" id="form-logar">
 
             <h2>Logar</h2>
-            
+            {% csrf_token %}
             <div class="container-text">
-                <label for="email">email</label>
-                <input type="text" name="email" id="email" autocomplete="off">
+                <label for="username">email</label>
+                <input type="text" name="username" id="username" autocomplete="off">
 
             </div>
             
             <div class="container-text">
-                <label for="senha">senha</label>
-                <input type="password" name="senha" id="senha" autocomplete="off">
+                <label for="password">senha</label>
+                <input type="password" name="password" id="password" autocomplete="off">
             </div>
 
             <button class="button-active" type="submit">Entrar</button>
@@ -50,13 +51,13 @@
             </div>
             
             <div class="container-text">
-                <label for="senha">senha</label>
-                <input type="password" name="senha" id="senha" autocomplete="off">
+                <label for="password1">senha</label>
+                <input type="password" name="password1" id="password1" autocomplete="off">
             </div>
 
             <div class="container-text">
-                <label for="senha">Confirme a senha</label>
-                <input type="password" name="senha" id="senha" autocomplete="off">
+                <label for="password2">Confirme a senha</label>
+                <input type="password" name="password2" id="password2" autocomplete="off">
             </div>
 
             <button class="button-active" type="submit">Registrar</button>
@@ -70,6 +71,6 @@
     </section>
 
 
-    <script src="./main.js"></script>
+    <script src="{% static 'js/main.js ' %}"></script>
 </body>
 </html>
